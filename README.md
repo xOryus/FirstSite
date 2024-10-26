@@ -25,7 +25,7 @@ Este é um projeto inicial com o objetivo de:
 
 ## 🌍 Acesse o Site
 
-Você pode ver o site ao vivo acessando [aqui](https://xoryus.github.io/). Confira o que consegui criar até agora e fique à vontade para deixar feedbacks!
+Você pode ver o site ao vivo acessando [aqui](https://xoryus.github.io/FirstSite/). Confira o que consegui criar até agora e fique à vontade para deixar feedbacks!
 
 ---
 
