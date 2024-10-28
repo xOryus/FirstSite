@@ -1,23 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #0073e6;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
-  footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 20px;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-top: 10%;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.kiss-button {
+  background: linear-gradient(45deg, #ff6b6b, #ff4757);
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.kiss-button:hover {
+  background: linear-gradient(45deg, #ff4757, #ff6b6b);
+  box-shadow: 0px 15px 20px rgba(255, 91, 120, 0.4);
+  transform: translateY(-3px);
+}
+
+.kiss-button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Mantém a sombra consistente */
+  background: linear-gradient(45deg, #ff6b6b, #ff4757); /* Evita mudança repentina de cor */
+}
