@@ -6,7 +6,7 @@ function createHearts() {
 
     setTimeout(() => {
         heart.remove();
-    }, 2000);
+    }, 1500);
 }
 
 // Audio player functionality
