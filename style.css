@@ -1,17 +1,27 @@
-/* style.css */
+/* Base styles */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   color: #e2e2e2;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Ensures no scrollbars from animation */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Center content vertically */
 }
 
+/* Center and structure main content */
 main {
   position: relative;
-  margin-top: 10%;
-  z-index: 2; /* Ensure it stays above the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  padding: 20px;
 }
 
 /* Full-screen animated gradient background */
@@ -28,7 +38,6 @@ body::before {
   z-index: -2;
 }
 
-/* Dark overlay for text readability */
 body::after {
   content: "";
   position: fixed;
@@ -36,7 +45,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.214); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.214);
   z-index: -1;
 }
 
@@ -48,8 +57,7 @@ body::after {
 
 /* Footer styling */
 footer {
-  
-  margin-top: 300px;
+  margin-top: 50px;
   font-size: 0.9em;
   color: #ffffff;
   z-index: 2;
@@ -57,9 +65,8 @@ footer {
 
 /* Button styles */
 .button-container {
-  position: relative;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .kiss-button {
@@ -88,18 +95,20 @@ footer {
   background: linear-gradient(45deg, #ff6b6b, #ff4757);
 }
 
+/* Audio Player styling */
 .audio-player {
   position: relative;
-  width: 300px;
-  background: rgba(85, 84, 84, 0.355); /* Semi-transparent dark background */
+  width: 100%;
+  max-width: 300px;
+  background: rgba(85, 84, 84, 0.301);
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   color: #ffffff;
   font-family: Arial, sans-serif;
   text-align: center;
-  margin: 20px auto;
-  overflow: hidden; /* Ensures blur doesn't exceed the border radius */
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 /* Background blur effect */
@@ -110,10 +119,10 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: inherit; /* Matches background color */
+  background: inherit;
   filter: blur(8px);
-  z-index: -1; /* Places it behind the content */
-  border-radius: 20px; /* Matches container border radius */
+  z-index: -1;
+  border-radius: 20px;
 }
 
 .album-art {
@@ -165,7 +174,6 @@ footer {
 }
 
 #progressBar {
-  
   width: 100%;
   margin: 0 10px;
 }
@@ -173,4 +181,65 @@ footer {
 #currentTime, #duration {
   font-size: 0.8em;
   color: #b3b3b3;
+}
+
+/* Responsive adjustments */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .audio-player {
+    max-width: 250px;
+    padding: 15px;
+  }
+
+  .kiss-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .audio-player {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .album-art {
+    width: 60px;
+    height: 60px;
+  }
+
+  .kiss-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p, footer {
+    font-size: 0.8rem;
+  }
+
+  .song-info h2 {
+    font-size: 1rem;
+  }
+
+  .song-info p {
+    font-size: 0.8em;
+  }
+
+  .control-button {
+    font-size: 1.2em;
+  }
 }
