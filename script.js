@@ -1,12 +1,22 @@
 function createHearts() {
-    const buttonContainer = document.querySelector('.button-container');
+    const button = document.querySelector('.kiss-button');
     const heart = document.createElement('div');
     heart.classList.add('heart');
-    buttonContainer.appendChild(heart);
 
+    // Get the exact position of the button
+    const buttonRect = button.getBoundingClientRect();
+
+    // Set heart's position based on button's position
+    heart.style.position = "fixed";
+    heart.style.left = `${buttonRect.left + buttonRect.width / 2}px`; // Center horizontally
+    heart.style.top = `${buttonRect.top}px`; // Position it above the button
+
+    document.body.appendChild(heart);
+
+    // Animate and remove the heart after a short time
     setTimeout(() => {
         heart.remove();
-    }, 1500);
+    }, 2000);
 }
 
 // Audio player functionality
