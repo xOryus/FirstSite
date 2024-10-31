@@ -10,9 +10,37 @@
 
 <body>
     <main>
-        <h1>Oi criança ❤️</h1>
-        <p>Este é o meu primeiro site hospedado no GitHub Pages.</p>
-        <p>Estou muito feliz por você estar aqui! 😊</p>
+        <!-- Audio Player Section -->
+        <div class="audio-player">
+        <!-- Album Art -->
+        <img src="Images\musicart.png" alt="Album Art" class="album-art">
+            
+            <!-- Song Info -->
+            <div class="song-info">
+                <h2>Riptide</h2>
+                <p>Vance Joy</p>
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="controls">
+                <button id="rewindButton" class="control-button">⏮️</button>
+                <button id="playPauseButton" class="control-button">▶️</button>
+                <button id="forwardButton" class="control-button">⏭️</button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span id="currentTime">00:00</span>
+                <input type="range" id="progressBar" value="0" max="100">
+                <span id="duration">00:00</span>
+            </div>
+
+            <!-- Hidden audio element -->
+            <audio id="audio" src="Music\Riptide - Vance Joy.flac"></audio>
+        </div>
+            <h1>Oi criança ❤️</h1>
+            <p>Este é o meu primeiro site hospedado no GitHub Pages.</p>
+            <p>Estou muito feliz por você estar aqui! 😊</p>
     </main>
 
     <div class="button-container">

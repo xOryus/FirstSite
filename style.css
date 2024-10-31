@@ -87,3 +87,74 @@ footer {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background: linear-gradient(45deg, #ff6b6b, #ff4757);
 }
+
+/* Audio Player Container Styling */
+.audio-player {
+  width: 300px;
+  background-color: #1b1b3a;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.album-art {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.song-info {
+  margin-top: -10px;
+}
+
+.song-info h2 {
+  font-size: 1.2em;
+  margin: 5px 0 0;
+}
+
+.song-info p {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#progressBar {
+  width: 100%;
+  margin: 0 10px;
+}
+
+#currentTime, #duration {
+  font-size: 0.8em;
+  color: #b3b3b3;
+}
